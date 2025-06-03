@@ -29,5 +29,5 @@ export default connectDB
 
 
 //quickcart
-//Ale@mongodb01
+//Alemongodb01
 //mongodb+srv://quickcart:Ale@mongodb01@cluster0.qdp8vqy.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
