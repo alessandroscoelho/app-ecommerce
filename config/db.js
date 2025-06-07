@@ -16,8 +16,8 @@ async function connectDB() {
             bufferCommands:false
         }
 
-        cached.promise = mongoose.connect(`${process.env.MONGODB_URI}/quickcart`,opts).then(mongoose =>{
-            return mongoose;
+        cached.promise = mongoose.connect(`${process.env.MONGODB_URI}/quickcart`,opts).then(mongoose => {
+            return mongoose
         })
     }
 
@@ -29,5 +29,5 @@ export default connectDB
 
 
 //quickcart
-//Alemongodb01
-//mongodb+srv://quickcart:Ale@mongodb01@cluster0.qdp8vqy.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+//alemongodb
+//mongodb+srv://quickcart:alemongodb@cluster0.qdp8vqy.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
