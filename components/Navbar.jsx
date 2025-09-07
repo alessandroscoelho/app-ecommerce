@@ -27,10 +27,10 @@ const Navbar = () => {
           Shop
         </Link>
         <Link href="/" className="hover:text-gray-900 transition">
-          About Us
+          Sobre
         </Link>
         <Link href="/" className="hover:text-gray-900 transition">
-          Contact
+          Contato
         </Link>
 
         {isSeller && <button onClick={() => router.push('/seller')} className="text-xs border px-4 py-1.5 rounded-full">Seller Dashboard</button>}
@@ -58,7 +58,7 @@ const Navbar = () => {
       </ul>
 
       <div className="flex items-center md:hidden gap-3">
-        {isSeller && <button onClick={() => router.push('/seller')} className="text-xs border px-4 py-1.5 rounded-full">Seller Dashboard</button>}
+        {isSeller && <button onClick={() => router.push('/seller')} className="text-xs border px-4 py-1.5 rounded-full">Dashboard</button>}
         {
           user
             ? <>
