@@ -12,13 +12,13 @@ const Banner = () => {
       />
       <div className="flex flex-col items-center justify-center text-center space-y-2 px-4 md:px-0">
         <h2 className="text-2xl md:text-3xl font-semibold max-w-[290px]">
-          Level Up Your Gaming Experience
+          Aprimore sua experiência de jogo
         </h2>
         <p className="max-w-[343px] font-medium text-gray-800/60">
-          From immersive sound to precise controls—everything you need to win
+          Do som envolvente aos controles precisos — tudo o que você precisa para vencer.
         </p>
         <button className="group flex items-center justify-center gap-1 px-12 py-2.5 bg-orange-600 rounded text-white">
-          Buy now
+          Compre agora
           <Image className="group-hover:translate-x-1 transition" src={assets.arrow_icon_white} alt="arrow_icon_white" />
         </button>
       </div>
