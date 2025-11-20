@@ -26,8 +26,3 @@ async function connectDB() {
 }
 
 export default connectDB
-
-
-//quickcart
-//alemongodb
-//mongodb+srv://quickcart:alemongodb@cluster0.qdp8vqy.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
