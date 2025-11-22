@@ -12,12 +12,13 @@ async function connectDB() {
     }
 
     if (!cached.promise) {
-        const opts = {
-            bufferCommands:false
-        }
 
+        const opts = {
+            bufferCommands:false    
+        }
         cached.promise = mongoose.connect(`${process.env.MONGODB_URI}/quickcart`,opts).then(mongoose => {
             return mongoose
+  
         })
     }
 
@@ -26,3 +27,4 @@ async function connectDB() {
 }
 
 export default connectDB
+
