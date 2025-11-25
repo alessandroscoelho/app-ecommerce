@@ -15,11 +15,11 @@ export const AppContextProvider = (props) => {
     const currency = process.env.NEXT_PUBLIC_CURRENCY
     const router = useRouter()
 
-    const { user } = useUser()
+    const { user } = useUser()   
 
     const [products, setProducts] = useState([])
     const [userData, setUserData] = useState(false)
-    const [isSeller, setIsSeller] = useState(true)
+    const [isSeller, setIsSeller] = useState(false)
     const [cartItems, setCartItems] = useState({})
 
     const fetchProductData = async () => {
@@ -27,6 +27,9 @@ export const AppContextProvider = (props) => {
     }
 
     const fetchUserData = async () => {
+        if (user.publicMetadata.role === 'seller') {
+            setIsSeller(true)
+        }
         setUserData(userDummyData)
     }
 
