@@ -16,7 +16,7 @@ export async function POST(request) {
 
         const handlePaymentIntent = async (paymentIntentId, isPaid) => {
             const session = await stripe.checkout.sessions.list({
-                paymentIntentId: paymentIntentId
+                payment_intent:paymentIntentId
             })
 
             const { orderId, userId } = session.data[0].metadata
@@ -40,19 +40,20 @@ export async function POST(request) {
 
             case 'payment_intent.canceled': {
                 await handlePaymentIntent(event.data.object.id, false)
+                console.log("pagamento saiu pela falha...");
+                
                 break;
             }
             default:
                 console.error(event.type);
-                
                 break;
         }
-        return NextResponse.json({ received: true })
+        return NextResponse.json({ received:true })
 
     } catch (error) {
         console.error(error);
         
-        return NextResponse.json({ message:error.message`` })
+        return NextResponse.json({ message:error.message })
     }
 
 }
