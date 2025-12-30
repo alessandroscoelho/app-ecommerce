@@ -39,9 +39,7 @@ export async function POST(request) {
             }
 
             case 'payment_intent.canceled': {
-                await handlePaymentIntent(event.data.object.id, false)
-                console.log("pagamento saiu pela falha...");
-                
+                await handlePaymentIntent(event.data.object.id, false)               
                 break;
             }
             default:
